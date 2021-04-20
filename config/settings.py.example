@@ -6,11 +6,17 @@
 prefix = '!'
 
 # -------------
-# ROLE SETTINGS
+# COG SETTINGS
 # -------------
 
+# DefaultRole Cog
 default_role = 'member'
 
 # ---------------
-# FEATURE TOGGLES
+# COG TOGGLES
 # ---------------
+features = {
+    'ping': True,
+    'default_role': True,
+    'palindrome': True
+}
