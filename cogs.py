@@ -3,6 +3,7 @@ from modules.palindrome.Palindrome import Palindrome
 from modules.ping.Ping import Ping
 from modules.roles.DefaultRole import DefaultRole
 from config.settings import features
+from modules.scheduled.Clock import Clock
 
 
 def add_cogs(bot):
@@ -13,3 +14,5 @@ def add_cogs(bot):
         bot.add_cog(DefaultRole(bot))
     if features.get('palindrome'):
         bot.add_cog(Palindrome(bot))
+    if features.get('clock'):
+        bot.add_cog(Clock(bot))
