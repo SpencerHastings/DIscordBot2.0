@@ -9,6 +9,8 @@ prefix = '!'
 # ROLE SETTINGS
 # -------------
 
+default_role = 'member'
+
 # ---------------
 # FEATURE TOGGLES
 # ---------------
