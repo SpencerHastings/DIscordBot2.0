@@ -14,6 +14,8 @@ bot = commands.Bot(command_prefix=prefix)
 add_cogs(bot)
 bot.run(botToken)
 
+# random stuff below
+
 # async def background_task():
 #     await bot.wait_until_ready()
 #     await asyncio.sleep(5)
