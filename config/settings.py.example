@@ -9,8 +9,15 @@ prefix = '!'
 # COG SETTINGS
 # -------------
 
+# Core Cog
+core_config = {
+    'custom_status': ''
+}
+
 # DefaultRole Cog
-default_role = 'member'
+default_role_config = {
+    'role': 'member'
+}
 
 # ---------------
 # COG TOGGLES

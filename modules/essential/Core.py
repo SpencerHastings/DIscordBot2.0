@@ -1,8 +1,11 @@
 import logging
 from datetime import datetime
+
+import discord
 from discord import Status
 from discord.ext import commands
 from discord.ext.commands import has_permissions, CheckFailure
+from config.settings import core_config
 
 
 def get_time():
@@ -19,7 +22,10 @@ class Core(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         if self.first_start:
-            await self.bot.change_presence(status=Status.online)
+            if core_config['custom_status'] != '':
+                await self.bot.change_presence(status=Status.online, activity=discord.Game(core_config['custom_status']))
+            else:
+                await self.bot.change_presence(status=Status.online)
             self.first_start = False
             logging.basicConfig(filename='./logs/bot' + get_time() + '.log',
                                 filemode='a',
